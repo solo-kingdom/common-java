@@ -8,21 +8,21 @@ public enum Status {
     NOT_FOUND(false, 404, "resources not found");
 
     private final int code;
-    private final String description;
+    private final String msg;
     private final boolean success;
 
-    Status(boolean success, int code, String description) {
+    Status(boolean success, int code, String msg) {
         this.success = success;
         this.code = code;
-        this.description = description;
+        this.msg = msg;
     }
 
     public int getCode() {
         return code;
     }
 
-    public String getDescription() {
-        return description;
+    public String getMsg() {
+        return msg;
     }
 
     public boolean isSuccess() {
@@ -31,6 +31,6 @@ public enum Status {
 
     @Override
     public String toString() {
-        return code + ":" + description;
+        return code + ":" + msg;
     }
 }

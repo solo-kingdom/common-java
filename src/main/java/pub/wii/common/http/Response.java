@@ -13,7 +13,7 @@ public class Response<T> {
     }
 
     public Response(Status status) {
-        this(status.isSuccess(), status.getCode(), status.getDescription());
+        this(status.isSuccess(), status.getCode(), status.getMsg());
     }
 
     public T getData() {
